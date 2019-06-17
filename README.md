@@ -17,9 +17,7 @@ if you want to use a different tracer system, i.e. LightStep, all you have
 to do is pass the flag `--lightstep.token=ACCESS_TOKEN`.
 
 ### Docker
-A prebuilt docker image already exists. Run
-`docker run --rm -ti -p 8080:8080 -p 8700 Gabelbombe/golang-opentracing`.
-If you run the docker image, you might not be able to
+If you're having issues building your container, [follow this tutorial](https://www.callicoder.com/docker-golang-image-container-example/). If you run the docker image, you might not be able to
 access the various endpoints through localhost. If using docker machine.
 `docker-machine ip MY_MACHINE` will give you the IP you should access the
 addresses at, i.e. `123.45.67.123:8700/traces`.
