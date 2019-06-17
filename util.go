@@ -36,10 +36,12 @@ func startAppdashServer(appdashPort int) string {
   fmt.Printf("To see your traces, go to %s/traces\n", appdashURL)
 
   // Start the web UI in a separate goroutine.
-  tapp := traceapp.New(nil)
+  tapp, err := traceapp.New(nil, appdashURL)
+  if err != nil {
+    log.Fatalf("Error creating traceapp: %v", err)
+  }
   tapp.Store = store
   tapp.Queryer = store
-
   go func() {
     log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", appdashPort), tapp))
   }()

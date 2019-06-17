@@ -6,11 +6,11 @@ import (
   "log"
   "net/http"
 
-  lightstepot "github.com/lightstep/lightstep-tracer-go"
   "github.com/opentracing/opentracing-go"
-
-  appdashot "sourcegraph.com/sourcegraph/appdash/opentracing"
   "sourcegraph.com/sourcegraph/appdash"
+
+  lightstepot "github.com/lightstep/lightstep-tracer-go"
+  appdashot "sourcegraph.com/sourcegraph/appdash/opentracing"
 )
 
 var (
