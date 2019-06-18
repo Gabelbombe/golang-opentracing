@@ -13,3 +13,6 @@
 
 # Ignore example
 golang-opentracing
+
+# Ignore Git MOD
+go.mod
