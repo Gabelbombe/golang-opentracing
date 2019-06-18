@@ -2,7 +2,6 @@
 
 ## Building
 
-
 Make sure that you have Go installed, then run `go build`. If you are missing
 dependencies, run `go get ./...`. Alternatively, you can build the application
 using docker by running `scripts/docker_build.sh`.
